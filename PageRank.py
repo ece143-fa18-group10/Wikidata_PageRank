@@ -1,6 +1,6 @@
 import numpy as np
 
-def pageRankIter(transitionMatrix, PRMaxtrix, beta, epsilon, maxIter):
+def pageRankIter(transitionMatrix, PRMatrix, beta, epsilon, maxIter):
 	'''
 	:type transitionMatrix: ndarray
 	:type PRMatrix: ndarray
@@ -11,7 +11,16 @@ def pageRankIter(transitionMatrix, PRMaxtrix, beta, epsilon, maxIter):
 	'''
 	for _ in range(maxIter):
 		newPRMatrix = (1 - beta) * transitionMatrix.dot(PRMatrix) + beta * PRMatrix
-		if np.sum(np.absolute(newPRMatrix - PRMaxtrix)) < epsilon:
+		if np.sum(np.absolute(newPRMatrix - PRMatrix)) < epsilon:
 			return newPRMatrix
-		PRMaxtrix = newPRMatrix
-	return PRMaxtrix
+		PRMatrix = newPRMatrix
+	return PRMatrix
+
+if __name__ == '__main__':
+	from build_trans_mat import build_trans_mat
+	from PageRank_matrix import pr_matrix
+	transitionMatrix = build_trans_mat()
+	PRMaxtrix = pr_matrix()
+	res = pageRankIter(transitionMatrix, PRMaxtrix, 0.2, 0.0001, 100000)
+	print(res)
+	np.savetxt('PageRank_result.txt', res)
