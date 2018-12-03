@@ -1,5 +1,5 @@
-var width = window.innerWidth * 0.8,
-    height = window.innerHeight * 0.7;
+var height = window.innerHeight * 0.8,
+    width = height;
 
 var color = d3.scale.category20();
 
@@ -11,7 +11,7 @@ var force = d3.layout.force()
     .size([width, height]);
 
 function getrank(rval) {
-  return (rval * 10000) + 3;
+  return (rval / 2.0) + 3;
 }
 
 function getcolor(rval) {
@@ -46,9 +46,8 @@ function loadData(json) {
       .attr("class", "node")
       .attr("r", function(d) { return getrank(d.rank); } )
       .style("fill", function(d) { return getcolor(d.rank); })
-      .on("dblclick",function(d) { 
-            if ( confirm('Do you want to open '+d.url) ) 
-                window.open(d.url,'_new',''); 
+      .on("dblclick",function(d) {  
+            window.open(d.url,'_new',''); 
             d3.event.stopPropagation();
         })
       .call(force.drag);
