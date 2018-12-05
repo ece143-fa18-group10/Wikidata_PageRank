@@ -12,7 +12,14 @@
 The dataset we used in the project and results of dataset preprocessing.
 
 ### [source code](https://github.com/ece143-fa18-group10/Wikidata_PageRank/tree/master/project/source%20code)
-The source codes of our project.
+
+| file | description |
+| - | - |
+| PageRank.py | run the PageRank algorithm |
+| PageRank_matrix.py | generate the PR matrix |
+| build_trans_mat.py | generate the transition matrix |
+| preprocessing data.py | preprocess the California dataset |
+| background_visualization.py | generate images to introduce the background of the project |
 
 ### [visualization](https://github.com/ece143-fa18-group10/Wikidata_PageRank/tree/master/project/visualization)
 Two forms of visualization of our project.
