@@ -26,7 +26,7 @@ The dataset we used in the project and results of dataset preprocessing.
 | folder | description |
 | - | - |
 | images | includes visualization images |
-| web page | includes files to generate the web page to visualize PageRank |
+| [web page](https://ece143-fa18-group10.github.io/Wikidata_PageRank/) | includes files to generate the web page to visualize PageRank |
 
 ### [docs](https://github.com/ece143-fa18-group10/Wikidata_PageRank/tree/master/project/docs)
 The proposal and the slide of presentation.
