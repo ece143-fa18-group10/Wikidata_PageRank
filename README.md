@@ -22,7 +22,11 @@ The dataset we used in the project and results of dataset preprocessing.
 | background_visualization.py | generate images to introduce the background of the project |
 
 ### [visualization](https://github.com/ece143-fa18-group10/Wikidata_PageRank/tree/master/project/visualization)
-Two forms of visualization of our project.
+
+| folder | description |
+| - | - |
+| images | includes visualization images |
+| web page | includes files to generate the web page to visualize PageRank |
 
 ### [docs](https://github.com/ece143-fa18-group10/Wikidata_PageRank/tree/master/project/docs)
 The proposal and the slide of presentation.
