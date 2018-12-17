@@ -1,13 +1,17 @@
 
-# coding: utf-8
-
-# In[22]:
-
-
 import pandas as pd
 import numpy as np
 
 def build_trans_mat(length = len(pd.read_csv('note_list.csv')),fname = 'link_list.csv'):
+    '''
+	build transition matrix 
+    Params:length, length of total notes
+    Type:int
+    Params:fname,file of links
+    Type:string
+    Return:trans_mat, transition matrix of links
+    Type: ndarray
+    '''
     data = pd.read_csv(fname,sep = ',')
     grp = data.groupby('source_link')
     data = data.values

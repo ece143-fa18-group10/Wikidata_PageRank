@@ -12,6 +12,14 @@ edu_reserved_link = ['www','html','com','edu','htm','net','links','index']
 reserved_link=['www','html','com','htm','net','links','index']
 
 def plot_domain(data,name):
+    ''' 
+    plot domain analysis result data
+    Params:data,result of domain analysis
+    Type:list of tuples
+    Params:name,name of domain
+    Type:string 
+
+    '''
     import matplotlib.pyplot as plt
     import numpy as np
     from scipy.interpolate import spline
@@ -99,8 +107,6 @@ if __name__ == '__main__':
     plot_domain(tld_result,'Top level Domain')
     plot_domain(edu_result,'Domain related to .edu')
 
-
-# In[227]:
 
 
 
