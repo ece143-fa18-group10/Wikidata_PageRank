@@ -45,6 +45,16 @@ def plot_domain(data,name):
     plt.show()
     
 def domainanalysis(fname1='note_list.csv',fname2 = 'link_list.csv'):
+    '''
+    statistics of domains
+    
+    Params:fname1, file name of note list
+    Type: string
+    Params: fname2, file name of link list
+    Type: string
+    Return: list of tuples
+
+    '''
     ucsd_link = pd.DataFrame()
     notedata = pd.read_csv(fname1,sep = ',')
     linkdata = pd.read_csv(fname2,sep = ',')
