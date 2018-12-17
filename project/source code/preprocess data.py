@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[46]:
-
-
 import numpy as np
 import pandas as pd
 fname = 'gr0.California'
@@ -23,28 +17,4 @@ df_note.to_csv('note_list.csv', sep=',')
 df_link.to_csv('link_list.csv', sep=',')
 
 
-
-    
-    
-
-
-# In[12]:
-
-
-# print(df.link)
-
-
-# In[64]:
-
-
-
-print(df_link.values)
-grp=df_link.groupby('source_link')
-print(len(df.link))
-print(len(grp.get_group('0')))
-print(df_link.values)
-
-for source, target in grp.get_group('0').values:
-    print(source,target)
-    
 
